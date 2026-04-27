@@ -798,20 +798,8 @@ function Activity3Step({ onBack, onNext }: { onBack: () => void; onNext: () => v
   )
 }
 
-// ─── App Shell ───────────────────────────────────────────────────────────────
-
-const STEP_LABELS: Record<Step, string> = {
-  intro: 'Introduction',
-  activity1: 'Activity 1',
-  activity2: 'Activity 2',
-  activity3: 'Activity 3',
-}
-
-const STEPS: Step[] = ['intro', 'activity1', 'activity2', 'activity3']
-
 export default function App() {
   const [step, setStep] = useState<Step>('intro')
-  const stepIndex = STEPS.indexOf(step)
 
   return (
     <div className="app">
